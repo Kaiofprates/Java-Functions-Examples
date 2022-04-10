@@ -15,7 +15,6 @@ public class _Predicate {
 
         boolean test1 = isPhoneNumberValidPredicate.or(containsNumber3).test("07000000000");
         System.out.println(test1);
-
     }
 
     static Predicate<String> isPhoneNumberValidPredicate = number -> number.startsWith("07") && number.length() == 11;
