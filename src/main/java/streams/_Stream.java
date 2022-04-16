@@ -31,10 +31,13 @@ public class _Stream {
         Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
         boolean containsFemales = people.stream()
                 .anyMatch(personPredicate);
-        System.out.println(containsFemales);
+        //System.out.println(containsFemales);
 
         long count = people.stream().count();
-        System.out.println(count);
+        //System.out.println(count);
+
+        boolean onyFemals = people.stream().allMatch(personPredicate);
+        System.out.println(onyFemals);
 
     }
 
